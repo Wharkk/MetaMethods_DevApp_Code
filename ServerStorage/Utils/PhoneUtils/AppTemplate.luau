@@ -4,7 +4,7 @@ function AppTemplate.new(): ()
 
 end
 
-function AppTemplate.launch(): ()
+function AppTemplate:launch(): ()
 	
 end
 
