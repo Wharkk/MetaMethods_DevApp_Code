@@ -1,12 +1,12 @@
 local RunService = game:GetService("RunService")
 
-local Dev = {}
+local DevSettings = {}
 
-Dev.DEV_DEBUG = false
+DevSettings.DEV_DEBUG = false
 
 -- [Auto] Sets the debug mode to false if the game is not in studio
 if not RunService:IsStudio() then
-	Dev.DEV_DEBUG = false
+	DevSettings.DEV_DEBUG = false
 end
 
-return Dev
+return DevSettings
