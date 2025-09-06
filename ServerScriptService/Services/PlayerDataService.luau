@@ -49,7 +49,7 @@ function Internals.onPlayerAdded(player: Player)
 	profile:AddUserId(player.UserId)
 	profile:Reconcile()
 	profile:ListenToRelease(function()
-		ProfileManager:clearProfile(player)
+		ProfileManager:clearProfileReference(player)
 		player:Kick(Settings.KICK_MESSAGE.DATA_LOADED_ELSEWHERE)
 	end)
 
@@ -71,7 +71,7 @@ function Internals.onPlayerRemoving(player: Player)
 	ProfileManager:SetProfile(player, profile)
 
 	profile:Release()
-	ProfileManager:clearProfile(player)
+	ProfileManager:clearProfileReference(player)
 	PlayerPlatform:removePlayerPlatform(player)
 end
 
