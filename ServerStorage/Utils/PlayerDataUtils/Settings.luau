@@ -18,7 +18,7 @@ Settings.DATASTORE_NAME = if RunService:IsStudio() then "dev" else "prod"
 -- [AUTO] The template to use for the current datastore
 Settings.TEMPLATE = if RunService:IsStudio() then require(templates.DevDataTemplate) else require(templates.ProdDataTemplate)
 
--- Kick messages when there is an error with the database
+-- Kick messages when there is an error with the datastore
 Settings.KICK_MESSAGE = {
 	DATA_NOT_FOUND = "There was an error while loading your data. If the issue persists, contact us through our community server.",
 	DATA_LOADED_ELSEWHERE = "There was an error while loading your data. If the issue persists, contact us through our community server."
